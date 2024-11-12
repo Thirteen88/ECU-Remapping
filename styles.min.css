@@ -1,0 +1,448 @@
+/* Reset and base styles */
+* {margin: 0; padding: 0; box-sizing: border-box;}
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    position: relative;
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    will-change: scroll-position;
+}
+
+/* Header styles */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transform: translateZ(0);
+    will-change: transform;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.logo img {
+    max-height: 50px;
+    width: auto;
+    height: auto;
+}
+
+/* Navigation */
+nav {position: relative;}
+#menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+#nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+#nav-menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+#nav-menu a:hover {color: #007bff;}
+
+/* Phone number styles */
+.phone-number {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+.phone-number i {color: #007bff;}
+.phone-number a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+.phone-number a:hover {color: #007bff;}
+
+/* Hero section */
+#hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 2rem;
+    transition: opacity 0.2s ease;
+    will-change: opacity;
+}
+#hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transform: translateZ(0);
+    will-change: transform;
+}
+#hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background 0.2s ease;
+    margin-top: 2rem;
+}
+.cta-button:hover {background: #0056b3;}
+
+/* Services section */
+#services {
+    padding: 4rem 2rem;
+    background: #f8f9fa;
+    transform: translateZ(0);
+}
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+.service-card {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+    will-change: transform;
+}
+.service-card:hover {transform: translateY(-5px);}
+.service-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+.service-card h3 {margin: 1rem 0;}
+.service-cta {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #007bff;
+    text-decoration: none;
+}
+
+/* Vehicle Selector and About Section */
+#vehicle-selector {
+    padding: 4rem 2rem;
+    background: white;
+}
+
+.two-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Vehicle Selector Column */
+.selector-column {
+    padding: 2rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.vehicle-form {
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.form-group {
+    display: grid;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-weight: 500;
+    color: #333;
+}
+
+.form-group select {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: border-color 0.2s ease;
+}
+
+.form-group select:hover {
+    border-color: #007bff;
+}
+
+.selector-button {
+    padding: 1rem;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    margin-top: 1rem;
+}
+
+.selector-button:hover {
+    background: #0056b3;
+}
+
+/* About Column */
+.about-column {
+    padding: 2rem;
+}
+
+.about-content {
+    margin-top: 2rem;
+}
+
+.about-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.about-content p {
+    margin-bottom: 1.5rem;
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.about-features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.feature i {
+    font-size: 2rem;
+    color: #007bff;
+}
+
+.feature span {
+    font-weight: 500;
+    color: #333;
+}
+
+/* Blog section */
+#blog {
+    padding: 4rem 2rem;
+    background: #f8f9fa;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.blog-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+    will-change: transform;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+}
+
+.blog-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.blog-content {
+    padding: 1.5rem;
+}
+
+.blog-meta {
+    display: flex;
+    gap: 1rem;
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.blog-meta i {
+    margin-right: 0.5rem;
+}
+
+.blog-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.blog-card p {
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.read-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.read-more:hover {
+    color: #0056b3;
+}
+
+.read-more i {
+    transition: transform 0.2s ease;
+}
+
+.read-more:hover i {
+    transform: translateX(5px);
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    padding: 2rem;
+    position: relative;
+    width: 100%;
+    transform: translateZ(0);
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+.social-links {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+}
+.social-links a {
+    color: white;
+    font-size: 1.5rem;
+    transition: color 0.2s ease;
+}
+.social-links a:hover {color: #007bff;}
+.footer-form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+.footer-form input {
+    width: 100%;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    border: none;
+    border-radius: 4px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    #menu-toggle {display: block;}
+    #nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: white;
+        padding: 1rem;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        flex-direction: column;
+        gap: 1rem;
+    }
+    #nav-menu.active {display: flex;}
+    .footer-content {flex-direction: column; gap: 1rem;}
+    #hero h1 {font-size: 2rem;}
+    .phone-number {font-size: 1rem;}
+    
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .blog-card img {
+        height: 200px;
+    }
+
+    .two-columns {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .about-features {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+/* Animation classes */
+.fade-in {
+    animation: fadeIn 0.3s ease-in;
+    will-change: opacity;
+}
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+/* Performance optimizations */
+* {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+img {
+    aspect-ratio: attr(width) / attr(height);
+}
+
+.fixed-element {
+    transform: translateZ(0);
+    will-change: transform;
+}

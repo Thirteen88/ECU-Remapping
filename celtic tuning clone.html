@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEST - Remapping - High-Performance Car Engine Specialists</title>
+    <meta name="description" content="Expert car engine tuning services. Boost your vehicle's performance with our professional tuning solutions. Get a quote today!">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <style>
+        .footer-columns {
+            display: flex;
+            justify-content: space-between;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .footer-column {
+            flex: 1;
+            padding: 0 2rem;
+        }
+        /* Add border-right to the first two columns */
+        .footer-column:not(:last-child) {
+            border-right: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .footer-column h3 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .footer-column ul li {
+            margin-bottom: 0.5rem;
+        }
+        .footer-column ul li a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .footer-column ul li a:hover {
+            color: white;
+        }
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .social-links a {
+            color: #ccc;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+        .social-links a:hover {
+            color: white;
+        }
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            grid-gap: 20px;
+        }
+        .blog-card img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="assets/images/celtic-knot-logo.svg" alt="TEST - Remapping Logo" width="150" height="50">
+        </div>
+        <nav>
+            <button aria-label="Toggle Menu" aria-expanded="false" id="menu-toggle">Menu</button>
+            <ul id="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#vehicle-selector">Vehicle Selector</a></li>
+                <li><a href="#blog">Blog</a></li>
+            </ul>
+        </nav>
+        <div class="phone-number">
+            <i class="fas fa-phone"></i>
+            <a href="tel:+1234567890">123-456-7890</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" style="background-image: url('assets/images/porsche engine tuning.jpg'); background-size: cover; background-position: center; position: relative;">
+            <div style="position: relative; z-index: 2; padding: 100px 20px; text-align: center; color: white;">
+                <h1>Unleash Your Engine's Potential</h1>
+                <p>Professional car engine tuning for maximum performance</p>
+                <a href="#services" class="cta-button">Our Services</a>
+            </div>
+            <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.7); z-index: 1;"></div>
+        </section>
+
+        <section id="services">
+            <h2>Our Services</h2>
+            <div class="service-grid">
+                <article class="service-card">
+                    <img src="assets/images/placeholder.svg" alt="ECU Tuning" width="300" height="200">
+                    <h3>ECU Tuning</h3>
+                    <p>Optimize your engine's performance with our expert ECU tuning service.</p>
+                    <a href="#" class="service-cta">Learn More</a>
+                </article>
+                <article class="service-card">
+                    <img src="assets/images/placeholder.svg" alt="Turbo Upgrades" width="300" height="200">
+                    <h3>Turbo Upgrades</h3>
+                    <p>Boost your horsepower with our high-performance turbo upgrades.</p>
+                    <a href="#" class="service-cta">Learn More</a>
+                </article>
+                <article class="service-card">
+                    <img src="assets/images/placeholder.svg" alt="Performance Exhaust" width="300" height="200">
+                    <h3>Performance Exhaust</h3>
+                    <p>Enhance power and sound with our custom exhaust solutions.</p>
+                    <a href="#" class="service-cta">Learn More</a>
+                </article>
+                <article class="service-card">
+                    <img src="assets/images/placeholder.svg" alt="Dyno Testing" width="300" height="200">
+                    <h3>Dyno Testing</h3>
+                    <p>Precise power measurements and tuning validation on our professional dynamometer.</p>
+                    <a href="#" class="service-cta">Learn More</a>
+                </article>
+            </div>
+        </section>
+
+        <section id="vehicle-selector">
+            <div class="two-columns">
+                <div class="selector-column">
+                    <h2>Find Your Vehicle</h2>
+                    <form class="vehicle-form">
+                        <div class="form-group">
+                            <label for="make">Make</label>
+                            <select id="make" name="make" required>
+                                <option value="">Select Make</option>
+                                <option value="audi">Audi</option>
+                                <option value="bmw">BMW</option>
+                                <option value="mercedes">Mercedes</option>
+                                <option value="volkswagen">Volkswagen</option>
+                                <option value="porsche">Porsche</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="model">Model</label>
+                            <select id="model" name="model" required>
+                                <option value="">Select Model</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="year">Year</label>
+                            <select id="year" name="year" required>
+                                <option value="">Select Year</option>
+                                <option value="2024">2024</option>
+                                <option value="2023">2023</option>
+                                <option value="2022">2022</option>
+                                <option value="2021">2021</option>
+                                <option value="2020">2020</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="engine">Engine</label>
+                            <select id="engine" name="engine" required>
+                                <option value="">Select Engine</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="selector-button">Find Tuning Options</button>
+                    </form>
+                </div>
+                <div class="about-column">
+                    <h2>About TEST - Remapping</h2>
+                    <div class="about-content">
+                        <img src="assets/images/placeholder.svg" alt="Workshop Image" class="about-image">
+                        <p>With over 15 years of experience in performance tuning, TEST - Remapping has established itself as a leader in automotive performance enhancement. Our state-of-the-art facility combines cutting-edge technology with expert craftsmanship to deliver exceptional results.</p>
+                        <p>We specialize in custom ECU tuning, performance upgrades, and comprehensive vehicle optimization. Our team of certified technicians uses the latest diagnostic equipment and tuning software to maximize your vehicle's potential while ensuring reliability and safety.</p>
+                        <div class="about-features">
+                            <div class="feature">
+                                <i class="fas fa-cog"></i>
+                                <span>Expert Technicians</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-tools"></i>
+                                <span>Premium Equipment</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Warranty Assured</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="blog">
+            <h2>Latest From Our Blog</h2>
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <img src="assets/images/placeholder.svg" alt="ECU Tuning Guide" width="400" height="250">
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="date"><i class="far fa-calendar"></i> March 15, 2024</span>
+                            <span class="category"><i class="fas fa-tag"></i> Tuning</span>
+                        </div>
+                        <h3>Complete Guide to ECU Tuning</h3>
+                        <p>Discover how ECU tuning can transform your vehicle's performance. Learn about the process, benefits, and what to expect.</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="blog-card">
+                    <img src="assets/images/placeholder.svg" alt="Turbo Selection" width="400" height="250">
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="date"><i class="far fa-calendar"></i> March 10, 2024</span>
+                            <span class="category"><i class="fas fa-tag"></i> Upgrades</span>
+                        </div>
+                        <h3>Choosing the Right Turbo for Your Car</h3>
+                        <p>Understanding turbo sizing, boost levels, and how to select the perfect turbocharger for your specific application.</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="blog-card">
+                    <img src="assets/images/placeholder.svg" alt="Dyno Testing" width="400" height="250">
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="date"><i class="far fa-calendar"></i> March 5, 2024</span>
+                            <span class="category"><i class="fas fa-tag"></i> Testing</span>
+                        </div>
+                        <h3>The Importance of Dyno Testing</h3>
+                        <p>Why dyno testing is crucial for performance tuning and how to interpret the results for optimal performance gains.</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="blog-card">
+                    <img src="assets/images/placeholder.svg" alt="Blog Post 4" width="400" height="250">
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="date"><i class="far fa-calendar"></i> February 28, 2024</span>
+                            <span class="category"><i class="fas fa-tag"></i> Maintenance</span>
+                        </div>
+                        <h3>Regular Car Maintenance Tips</h3>
+                        <p>Learn about essential car maintenance practices to keep your vehicle running smoothly and efficiently.</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="blog-card">
+                    <img src="assets/images/placeholder.svg" alt="Blog Post 5" width="400" height="250">
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="date"><i class="far fa-calendar"></i> February 21, 2024</span>
+                            <span class="category"><i class="fas fa-tag"></i> Performance</span>
+                        </div>
+                        <h3>Understanding Horsepower and Torque</h3>
+                        <p>Learn the difference between horsepower and torque and how they affect your vehicle's performance.</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="blog-card">
+                    <img src="assets/images/placeholder.svg" alt="Blog Post 6" width="400" height="250">
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="date"><i class="far fa-calendar"></i> February 14, 2024</span>
+                            <span class="category"><i class="fas fa-tag"></i> Technology</span>
+                        </div>
+                        <h3>Advanced Tuning Technologies</h3>
+                        <p>Explore the latest advancements in engine tuning technology and their impact on performance.</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-columns">
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li><i class="fas fa-phone"></i> 123-456-7890</li>
+                    <li><i class="fas fa-envelope"></i> info@test-remapping.com</li>
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Performance Drive</li>
+                    <li><i class="fas fa-clock"></i> Mon-Fri: 9am-6pm</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#services">Our Services</a></li>
+                    <li><a href="#vehicle-selector">Vehicle Selector</a></li>
+                    <li><a href="#blog">Latest News</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Follow Us</h3>
+                <p>Stay connected with us on social media for the latest updates and performance insights.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; padding: 1rem; border-top: 1px solid rgba(255, 255, 255, 0.2);">
+            <p>&copy; 2024 TEST - Remapping. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
